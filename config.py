@@ -6,7 +6,7 @@ load_dotenv()
 # Bot setup
 PREFIX = "!"
 BOT_NAME = "Gli77yBot"
-BOT_TOKEN = os.getenv("Bot_TOKEN")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 OWNER_ID = int(os.getenv("OWNER_ID"))
 
 # Discord Guild ID
