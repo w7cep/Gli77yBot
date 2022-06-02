@@ -2,6 +2,7 @@ import config
 from nextcord.ext import commands
 from .confirm_view import ConfirmView
 from .self_role_view import SelfRoleView
+from vip_view import VIPView
 
 
 class ButtonRolesCog(commands.Cog, name="Button Roles"):
@@ -27,6 +28,13 @@ class ButtonRolesCog(commands.Cog, name="Button Roles"):
     async def roles(self, ctx: commands.Context):
         """Starts a role view"""
         await ctx.send("Click a button to add or remove a role.", view=SelfRoleView())
+
+    @commands.command()
+    @commands.is_owner()
+    async def VIP(self, ctx: commands.Context, message_id: str):
+        """Starts a vip view"""
+        message = ctx.message
+        await message.edit(view=VIPView())
 
     @commands.command()
     @commands.is_owner()
