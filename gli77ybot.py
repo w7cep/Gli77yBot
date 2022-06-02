@@ -9,7 +9,7 @@ import config
 
 def main():
     # allows privledged intents for monitoring members joining, roles editing, and role assignments
-    intents = nextcord.Intents.default()
+    intents = nextcord.Intents.all()
     intents.guilds = True
     intents.members = True
 
