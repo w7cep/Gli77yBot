@@ -6,7 +6,7 @@
 Bot for the Dev Pro Tips YouTube Discussion and Support Server
 
 ## Features
-
+ 
 * `!markdown` - displays Discord markdown tips
 
 * `!ping` - check for a response from the bot
