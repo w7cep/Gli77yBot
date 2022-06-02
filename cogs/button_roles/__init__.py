@@ -31,7 +31,7 @@ class ButtonRolesCog(commands.Cog, name="Button Roles"):
 
     @commands.command()
     @commands.is_owner()
-    async def VIP(self, ctx: commands.Context, message_id: str):
+    async def VIP(self, ctx: commands.Context):
         """Starts a vip view"""
         message = ctx.message
         await message.edit(view=VIPView())
