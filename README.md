@@ -1,6 +1,5 @@
-# Dev Pro Tips Discord Bot
+# Gli77yGang Discord Bot
 
-[![Discord](https://img.shields.io/discord/819650821314052106?color=7289DA&logo=discord&logoColor=white)](https://discord.gg/fPrdqh3Zfu "Dev Pro Tips Discussion & Support Server")
 [![Powered by Nextcord](https://custom-icon-badges.herokuapp.com/badge/-Powered%20by%20Nextcord-0d1620?logo=nextcord)](https://github.com/nextcord/nextcord "Powered by Nextcord Python API Wrapper")
 
 Bot for the Dev Pro Tips YouTube Discussion and Support Server
@@ -34,13 +33,3 @@ Bot for the Dev Pro Tips YouTube Discussion and Support Server
 
 * `!update_rules` - mod command for updating the embed containing the rules
 
-### Owner Context Menu Commands
-
-* `giveaway` - start and select winners for a giveaway
-
-
-## Join the Discord Server
-
-Be one of the first to join the server!
-
-[![Discord](https://img.shields.io/discord/819650821314052106?color=%23738BD7&label=&logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/fPrdqh3Zfu)
