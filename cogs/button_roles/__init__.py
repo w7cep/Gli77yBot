@@ -1,4 +1,5 @@
 import config
+import nextcord
 from nextcord.ext import commands
 from .confirm_view import ConfirmView
 from .self_role_view import SelfRoleView
@@ -32,9 +33,23 @@ class ButtonRolesCog(commands.Cog, name="Button Roles"):
     @commands.command()
     @commands.is_owner()
     async def VIP(self, ctx: commands.Context):
-        """Starts a vip view"""
-        message = ctx.message
-        await message.edit(view=VIPView())
+        """VIP"""
+        version = "v.8.4.0"
+
+        embed = nextcord.Embed(
+            title="__**VIP Access**__",
+            description="Gain access to VIP treatment!",
+            colour=nextcord.Colour.blue()
+        )
+        """embed.set_thumbnail(
+            url="https://cdn.discordapp.com/attachments/891852099653083186/895902400416710666/greninja-frogadier.gif")
+        embed.set_author(
+            name="Frogadier Mod", icon_url="https://cdn.discordapp.com/avatars/892620195342987274/cb32b40409c7df4d147c400582f939ac.webp?size=128")
+        embed.set_image(
+            url="https://cdn.discordapp.com/attachments/859634488593743892/891612213654192168/greninja_banner.jpg")"""
+        embed.set_footer(text=f"Bot is running {version}")
+        
+        await ctx.send(embed=embed, view=VIPView())
 
     @commands.command()
     @commands.is_owner()
