@@ -2,7 +2,7 @@ import config
 from nextcord.ext import commands
 from .confirm_view import ConfirmView
 from .self_role_view import SelfRoleView
-from vip_view import VIPView
+from .vip_view import VIPView
 
 
 class ButtonRolesCog(commands.Cog, name="Button Roles"):
