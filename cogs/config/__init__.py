@@ -103,4 +103,4 @@ class Config(commands.Cog, name="Config"):
         await ctx.send(msg)
 
 def setup(bot: commands.Bot):
-    bot.add_cog(Ping(bot))
+    bot.add_cog(Config(bot))
