@@ -2,7 +2,7 @@
 
 [![Powered by Nextcord](https://custom-icon-badges.herokuapp.com/badge/-Powered%20by%20Nextcord-0d1620?logo=nextcord)](https://github.com/nextcord/nextcord "Powered by Nextcord Python API Wrapper")
 
-Bot for the Dev Pro Tips YouTube Discussion and Support Server
+Bot for the Gli77yGang Server
 
 ## Features
  
