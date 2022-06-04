@@ -32,7 +32,7 @@ class Rules(commands.Cog, name="Rules"):
         # confirmation
         await ctx.send(embed=embed_success("Rules have been successfully updated. 🎉"))
     
-    @commands.command(name="rules")
+    @commands.command(name="rules", hidden=True)
     @commands.is_owner()
     @commands.guild_only()
     async def rules(self, ctx):
