@@ -3,19 +3,21 @@ from utils.utils import custom_id
 import nextcord
 import config
 
-VIEW_NAME = "SelfRoleView"
+VIEW_NAME = "VIPView"
 
 
-class SelfRoleView(RoleView):
+class VIPView(RoleView):
     def __init__(self):
         super().__init__(required_roles=[config.MEMBER_ROLE_ID])
-
+    
     @nextcord.ui.button(
-        label="R&D",
-        emoji="🥼",
+        label="VIP",
+        emoji="👑",
         style=nextcord.ButtonStyle.primary,
-        custom_id=custom_id(VIEW_NAME, config.RD_ROLE_ID),
+        custom_id=custom_id(VIEW_NAME, config.VIP_ROLE_ID),
     )
-    async def RD_button(self, button, interaction):
+    async def VIP_button(self, button, interaction):
         await self.handle_click(button, interaction)
+
+
    
