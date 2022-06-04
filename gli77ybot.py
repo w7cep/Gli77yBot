@@ -3,7 +3,7 @@ import os
 import aiohttp
 import nextcord
 from nextcord.ext import commands
-
+import aiosqlite
 import config
 
 
@@ -30,7 +30,11 @@ def main():
     @bot.event
     async def on_ready():
         print(f"{bot.user.name} has connected to Discord.")
-
+        async with aiosqlite.connect("main.db") as db:
+            async with db.cursor() as cursor:
+                await cursor.execute("CREATE TABLE IF NOT EXISTS users (id INTERGER , guild INTERGER) ")
+            await db.commit()
+            
     # load all cogs
     for folder in os.listdir("cogs"):
         bot.load_extension(f"cogs.{folder}")
