@@ -1,5 +1,6 @@
 import nextcord
 from nextcord.ext import commands
+import os
 
 class Config(commands.Cog, name="Config"):
     """Bot configuration"""
