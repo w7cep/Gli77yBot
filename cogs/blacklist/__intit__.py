@@ -4,7 +4,7 @@ import utils.json_loader as jl
 
 
 class Blacklist(commands.Cog, name="Blacklist"):
-    """Test commands"""
+    """Blacklist commands"""
 
     def __init__(self, bot: commands.Bot):
         self.bot = bot
