@@ -1,15 +1,5 @@
 import nextcord
 from nextcord.ext import commands
-import utils.json_loader as jl
-from utils import checks
-import inspect
-import datetime
-from collections import Counter
-import asyncio
-import os
-import random
-import traceback
-import config
 
 class Owner(commands.Cog, name="Owner"):
     """Test commands"""
