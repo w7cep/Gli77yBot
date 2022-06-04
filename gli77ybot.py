@@ -34,8 +34,21 @@ def main():
             async with db.cursor() as cursor:
                 await cursor.execute("CREATE TABLE IF NOT EXISTS users (id INTERGER , guild INTERGER) ")
             await db.commit()
-            
-    # load all cogs
+    
+    @bot.command()
+    async def adduser(ctx, member: nextcord.Member):
+        member = ctx.author
+        async with aiosqlite.connect("main.db") as db:
+            async with db.cursor() as cursor:
+                await cursor.execute("SELECT id FROM users WHERE guild = ?", (ctx.guild.id,))
+                data = await cursor.fetchone()
+                if data:
+                    await cursor.execute("UPDATE users SET id = ? WHERE guild = ?", (member.id, ctx.guild.id,))
+                else:
+                    await cursor.execute("INSERT INTO users (id, guild) Values (?, ?)", (member.id, ctx.guild.id,))
+            await db.commit()            
+    
+      # load all cogs
     for folder in os.listdir("cogs"):
         bot.load_extension(f"cogs.{folder}")
 
