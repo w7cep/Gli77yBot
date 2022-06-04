@@ -20,6 +20,7 @@ class ButtonRolesCog(commands.Cog, name="Button Roles"):
             return
         self.__bot.add_view(SelfRoleView())
         self.__bot.add_view(ConfirmView())
+        self.__bot.add_view(VIPView())
         # set flag
         self.__bot.persistent_views_added = True
         print("Button views added")
